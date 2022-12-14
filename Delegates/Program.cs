@@ -10,7 +10,12 @@
         messageService.AddMessage(new Message("Ang. hundfrisyren", "Jag önskar en helpermanentning av Fido, inte rakning. Hoppas mitt meddelande når dig i tid.", "Lasse på macken", "Sax&Koppel AB"));
 
         // 2. Avkommentera denna inför uppgift 2 i MessageService.
-        //messageService.ProcessMessages(FilterBadWords);
+        messageService.ProcessMessages(FilterBadWords);
+
+        foreach (var message in messageService.GetMessages())
+        {
+            Console.WriteLine(message);
+        }
     }
 
     // #1B - Skriv en metod som OnMessageAdded kan referera till. Låt metoden skriva ut vem som skickat ett meddelande till vem.

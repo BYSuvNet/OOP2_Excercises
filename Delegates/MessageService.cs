@@ -28,9 +28,12 @@ class MessageService
 
     public int MessagesProcessed { get; set; }
 
-    public void ProcessMessages()
+    public void ProcessMessages(Func<Message, int> filter)
     {
-
+        foreach (var item in messages)
+        {
+            MessagesProcessed += filter(item);
+        }
     }
 
     // #3. Låt GetMessage ta en delegat som input. Delegatens uppgift skall vara att välja ut vilka Message-objekt 
@@ -67,5 +70,10 @@ class Message
         Body = body;
         From = from;
         To = to;
+    }
+
+    public override string ToString()
+    {
+        return Id + $": From:{From} to {To}. Subject: {Subject}. \n {Body}";
     }
 }
