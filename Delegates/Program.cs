@@ -12,7 +12,12 @@
         // 2. Avkommentera denna inför uppgift 2 i MessageService.
         messageService.ProcessMessages(FilterBadWords);
 
-        foreach (var message in messageService.GetMessages())
+        foreach (var message in messageService.GetMessages(msg => msg.From == "Krister"))
+        {
+            Console.WriteLine(message);
+        }
+
+        foreach (var message in messageService.GetMessages(msg => msg.From == "Krister" && msg.To == "Gustav"))
         {
             Console.WriteLine(message);
         }

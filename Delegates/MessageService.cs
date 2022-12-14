@@ -3,7 +3,7 @@ class MessageService
     List<Message> messages = new(){ new Message("Hej!", "Ska vi gå på bio?", "Gustav", "Krister"),
                                      new Message("Re: Hej!", "Ja järnspikars vad kul! Jag vill se avataar!", "Krister", "Gustav"),
                                      new Message("Re: Re: Hej!", "Jasså? Jag vill hellre se Avataar 2", "Gustav", "Krister"),
-                                     new Message("Re: Re: Re: Hej!", "Meeeeeh sluta dryga dig", "Gustav", "Krister") };
+                                     new Message("Re: Re: Re: Hej!", "Meeeeeh sluta dryga dig", "Krister", "Gustav") };
 
     // Extra: Skapa en klass som implementerar interfacet IDataLoader. Skicka in det objektet i denna konstruktor. Låt objektet 
     // fylla på 'message'-listan istället för att göra som här ovan (Ta alltså bort alla de objekten och låt listan vara tom från början.)
@@ -39,13 +39,16 @@ class MessageService
     // #3. Låt GetMessage ta en delegat som input. Delegatens uppgift skall vara att välja ut vilka Message-objekt 
     // ur listan 'messages' som skall läggas i tmpListan. Den skall alltså användas som ett sorts filter, så att metoden
     // kan returnera listor med olika typer av innehåll beroende på vad vi filtrerar på.
-    public List<Message> GetMessages()
+    public List<Message> GetMessages(Predicate<Message> filter = null)
     {
         List<Message> tmpList = new();
 
         foreach (var msg in messages)
         {
-            tmpList.Add(msg);
+            if (filter == null || filter(msg))
+            {
+                tmpList.Add(msg);
+            }
         }
 
         return tmpList;
