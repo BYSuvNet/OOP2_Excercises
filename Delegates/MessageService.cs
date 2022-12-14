@@ -60,6 +60,8 @@ class Message
     {
         Id = new Random().Next(0, 99999999);
         SentAt = DateTime.Now;
+        Subject = subject;
+        Body = body;
         From = from;
         To = to;
     }
