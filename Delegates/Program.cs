@@ -5,7 +5,7 @@
         MessageService messageService = new MessageService();
 
         // Till Uppgift 1.
-        //messageService.OnMessageAdded = ;
+        messageService.OnMessageAdded = PrintMessageSent;
 
         messageService.AddMessage(new Message("Ang. hundfrisyren", "Jag önskar en helpermanentning av Fido, inte rakning. Hoppas mitt meddelande når dig i tid.", "Lasse på macken", "Sax&Koppel AB"));
 
@@ -14,6 +14,10 @@
     }
 
     // #1B - Skriv en metod som OnMessageAdded kan referera till. Låt metoden skriva ut vem som skickat ett meddelande till vem.
+    public static void PrintMessageSent(Message msg)
+    {
+        Console.WriteLine($"{msg.From} sent a message to {msg.To}");
+    }
 
     // Till uppgift 2:
     public static int FilterBadWords(Message msg)

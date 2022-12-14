@@ -13,11 +13,14 @@ class MessageService
     // }
 
     // #1A. Lägg till en delegat som tar ett message-object som input, men inget returvärde. Kalla delegaten för OnMessageAdded
+    public Action<Message> OnMessageAdded;
 
     public void AddMessage(Message msg)
     {
         messages.Add(msg);
+
         //Kalla på OnMessageAdded-delegaten här.
+        OnMessageAdded?.Invoke(msg);
     }
 
     // #2 Skriv klart metoden ProcessMessages så att den kan ta emot och köra metoden FilterBadWords som skickas in från Main-metoden, på samtliga 
