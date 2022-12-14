@@ -1,16 +1,13 @@
 class MessageService
 {
-    List<Message> messages = new(){ new Message("Hej!", "Ska vi gå på bio?", "Gustav", "Krister"),
-                                     new Message("Re: Hej!", "Ja järnspikars vad kul! Jag vill se avataar!", "Krister", "Gustav"),
-                                     new Message("Re: Re: Hej!", "Jasså? Jag vill hellre se Avataar 2", "Gustav", "Krister"),
-                                     new Message("Re: Re: Re: Hej!", "Meeeeeh sluta dryga dig", "Krister", "Gustav") };
+    List<Message> messages;
 
     // Extra: Skapa en klass som implementerar interfacet IDataLoader. Skicka in det objektet i denna konstruktor. Låt objektet 
     // fylla på 'message'-listan istället för att göra som här ovan (Ta alltså bort alla de objekten och låt listan vara tom från början.)
-    // public MessageService(IDataLoader dataLoader)
-    // {
-    //     messages = dataLoader.GetMessages();
-    // }
+    public MessageService(IDataLoader dataLoader)
+    {
+        messages = dataLoader.GetMessages();
+    }
 
     // #1A. Lägg till en delegat som tar ett message-object som input, men inget returvärde. Kalla delegaten för OnMessageAdded
     public Action<Message> OnMessageAdded;

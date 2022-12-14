@@ -2,7 +2,9 @@
 {
     private static void Main(string[] args)
     {
-        MessageService messageService = new MessageService();
+        IDataLoader dataLoader = new MessageGenerator();
+
+        MessageService messageService = new MessageService(dataLoader);
 
         // Till Uppgift 1.
         messageService.OnMessageAdded = PrintMessageSent;
