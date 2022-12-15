@@ -46,6 +46,10 @@
 
         //Ordna dom i ordningen flest i samma land överst
 
+        //Hur kan du ta reda på vilket land som har användare mest högst totala DataStored?
+        //Alltså, räkna ihop den totala DataStored per land och skriv ut det land som ligger högst.
+        //Använd dig av så mkt LINQ som möjligt, ex Sum() och Max()
+
 
 
 
