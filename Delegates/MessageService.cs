@@ -20,6 +20,8 @@ class MessageService
         OnMessageAdded?.Invoke(msg);
     }
 
+
+
     // #2 Skriv klart metoden ProcessMessages så att den kan ta emot och köra metoden FilterBadWords som skickas in från Main-metoden, på samtliga 
     // meddelanden i listan. Returvärdet skall läggas till den publika propertyn MessagesProcessed.
 
@@ -38,6 +40,8 @@ class MessageService
     // kan returnera listor med olika typer av innehåll beroende på vad vi filtrerar på.
     public List<Message> GetMessages(Predicate<Message> filter = null)
     {
+        //filter = msg => msg.From == "Krister";
+
         List<Message> tmpList = new();
 
         foreach (var msg in messages)
