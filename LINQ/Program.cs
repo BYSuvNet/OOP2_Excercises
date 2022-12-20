@@ -35,6 +35,15 @@
                                       .Where(g => g.Count() <= 3) //Välj också ut bara de länder som har 3 eller färre användare
                                       .OrderBy(g => g.Count()); //Samt ordna dem i storleksordning
 
+            // Use the GroupBy, Select, and Count methods to get the country names, population, and people
+            // var countries = people.GroupBy(p => p.Country)
+            //                       .Select(g => new
+            //                       {
+            //                           Country = g.Key,
+            //                           Population = g.Count(),
+            //                           People = g.Select(p => p.Name)
+            //                       });
+
             //Loopa nu igenom alla våra grupper och skriv ut landsnamnet tillsammans med antalet användare
             //Skriv också ut användarnas namn
             foreach (var group in usersByCountry)
