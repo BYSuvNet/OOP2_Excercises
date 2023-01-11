@@ -2,7 +2,7 @@
 {
     private static void Main(string[] args)
     {
-        var stack = new Stack();
+        var stack = new Stack<string>();
         stack.Push("Hej");
         stack.Push("på");
         stack.Push("dej!");
