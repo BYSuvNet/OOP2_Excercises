@@ -2,6 +2,13 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello Generics!");
+        var stack = new Stack();
+        stack.Push("Hej");
+        stack.Push("på");
+        stack.Push("dej!");
+        Console.WriteLine(stack.Peek()); // Output: dej!
+        Console.WriteLine(stack.Pop()); // Output: dej!
+        Console.WriteLine(stack.Peek()); // Output: på
+        Console.WriteLine(stack.Count); // Output: 2
     }
 }
