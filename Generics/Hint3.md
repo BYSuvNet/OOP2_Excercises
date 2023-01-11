@@ -15,7 +15,7 @@ public void Push(string item)
 
 ## Pop()
 ```cs
-public T Pop()
+public string Pop()
 {
     if (count == 0)
         throw new InvalidOperationException("The stack is empty.");
@@ -36,7 +36,7 @@ public T Pop()
 ```cs
 private void ResizeArray(int newSize)
 {
-    var newArray = new T[newSize];
+    var newArray = new string[newSize];
     Array.Copy(items, newArray, count);
     items = newArray;
 }

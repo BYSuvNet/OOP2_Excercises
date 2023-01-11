@@ -20,12 +20,12 @@ class Stack
         // Add the item to the top of the stack
     }
 
-    public T Pop()
+    public string Pop()
     {
         // Remove and return the item at the top of the stack
     }
 
-    public T Peek()
+    public string Peek()
     {
         // Return the item at the top of the stack without removing it
     }
