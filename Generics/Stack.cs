@@ -1,4 +1,4 @@
-class Stack<T>
+class Stack<T> where T : IComparable<T>
 {
     private T[] items;
     private int count;
@@ -46,5 +46,10 @@ class Stack<T>
         var newArray = new T[newSize];
         Array.Copy(items, newArray, count);
         items = newArray;
+    }
+
+    public bool CompareToFirst(T input)
+    {
+        return items[0].CompareTo(input) > 0;
     }
 }
