@@ -1,8 +1,7 @@
-namespace SuvnetPress;
+namespace SuvnetPressEF;
 
-class BlogPost
+public class BlogPost
 {
-
     public int Id { get; private set; }
     public Author Author { get; private set; }
     public string Title { get; set; }

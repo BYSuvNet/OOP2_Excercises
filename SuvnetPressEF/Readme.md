@@ -19,5 +19,5 @@ Se till så att applikationen kan spara samtliga klasser till en SQLite-databas.
 * Gör saker steg för steg och se till så att saker funkar, försök inte lägga in alla tabeller samtidigt.
 * Använd InMemory-databas först för att verifiera att koden kompilerar i tidigt skede
 * Det är ganska troligt att alla klasser inte är helt anpassade för att användas med EF ännu. Exempelvis Blog.cs behöver troligen skrivas om en del. 
-* 
+
 

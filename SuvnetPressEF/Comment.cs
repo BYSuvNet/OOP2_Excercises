@@ -1,6 +1,6 @@
-namespace SuvnetPress;
+namespace SuvnetPressEF;
 
-class Comment
+public class Comment
 {
     public string Content { get; set; }
     public DateTime CreatedAt { get; private set; }

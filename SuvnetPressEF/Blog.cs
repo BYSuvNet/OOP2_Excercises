@@ -1,6 +1,6 @@
-namespace SuvnetPress;
+namespace SuvnetPressEF;
 
-class Blog
+public class Blog
 {
     List<BlogPost> blogPosts = new();
 

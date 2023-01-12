@@ -1,6 +1,6 @@
-namespace SuvnetPress;
+namespace SuvnetPressEF;
 
-class Author
+public class Author
 {
     public string Name { get; set; }
     public string Email { get; set; }
