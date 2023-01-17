@@ -25,12 +25,8 @@
     {
         Console.WriteLine("-----WELCOME------");
 
-        var t1 = DoTaskAsync("Ladda ner fil");
-        var t2 = DoTaskAsync("Genomför en tung beräkning");
-
-        var t3 = Task.Run(async () => { await Task.Delay(6066); return "Task.Run klar!"; }).ContinueWith(t => Console.WriteLine(t.Result));
-
-        Task.WhenAll(t1, t2, t3).Wait();
+        DoTask("Ladda ner fil");
+        DoTask("Genomför en tung beräkning");
 
         Console.WriteLine("\n <Tryck för att avsluta programmet> \n");
         Console.ReadKey();
@@ -40,13 +36,6 @@
     {
         Console.WriteLine("STARTAR: " + taskName);
         Thread.Sleep(new Random().Next(1000, 5000));
-        Console.WriteLine("KLAR: " + taskName);
-    }
-
-    static async Task DoTaskAsync(string taskName)
-    {
-        Console.WriteLine("STARTAR: " + taskName);
-        await Task.Delay(new Random().Next(1000, 5000));
         Console.WriteLine("KLAR: " + taskName);
     }
 }
