@@ -1,5 +1,7 @@
 # Bookstore
 
+En övning på temat Delegater
+
 ## Instruktioner
 
 * 1: Läs och förstå koden. 
