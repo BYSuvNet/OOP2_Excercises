@@ -11,8 +11,6 @@ public class BlogPost
     private DateTime _createdAt;
     public DateTime CreatedAt { get { return _createdAt; } }
 
-    private DateTime _modifiedAt;
-
     public BlogPost(Author author)
     {
         Id = new Random().Next();

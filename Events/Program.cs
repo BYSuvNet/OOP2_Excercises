@@ -12,9 +12,9 @@ internal class Program
     {
         DoorSensor doorSensor = new DoorSensor();
 
-        // Registrera metoden 'DoorStateChanged' på doorSensors event
-        doorSensor.DoorStateChanged += DoorStateChanged;
-        doorSensor.DoorStateChanged += StartAlarm;
+        // Se till så att DoorSensor har ett event du kan registrera de två metoderna nedan på
+
+        // Lägg till en tredje metod som du också registrerar på eventet
 
         doorSensor.Start();
     }

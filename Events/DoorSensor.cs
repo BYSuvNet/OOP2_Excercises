@@ -1,6 +1,7 @@
 class DoorSensor
 {
-    public event EventHandler<bool> DoorStateChanged;
+    //Lägg till ett event till denna klass
+    //Se till att köra eventet vid rätt tillfälle med rätt argument
 
     public void Start()
     {
@@ -10,7 +11,6 @@ class DoorSensor
         {
             isDoorOpen = !isDoorOpen;
             Thread.Sleep(1000);
-            DoorStateChanged?.Invoke(this, isDoorOpen);
         }
     }
 }

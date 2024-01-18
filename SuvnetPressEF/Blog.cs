@@ -4,7 +4,7 @@ public class Blog
 {
     List<BlogPost> blogPosts = new();
 
-    //Lägga till en nu BlogPost
+    //Lägga till en ny BlogPost
     public void AddBlogPost(BlogPost blogPost)
     {
         blogPosts.Add(blogPost);
