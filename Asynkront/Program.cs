@@ -4,7 +4,7 @@
     // 1: Konvertera DoTask() till en asynkron metod, så att du kan...
     // 2: Se till så att du kan starta både "Ladda ner fil" och "Genomför tung beräkning" samtidigt, 
     //    så att "Tryck för att avsluta programmet" kommer upp innan någon av dem är klara.
-    // 3. Gör så att "Tryck för att avsluta programmet" visas först när båda uppgifterna är klara.
+    // 3. Efter det, gör så att "Tryck för att avsluta programmet" visas först när båda uppgifterna är klara.
     // 4. Använd Task.Run() för att köra igång en task innan de två första är klara. Vänta på alla innan "Tryck för att avsluta" visas
     // 5. Extra klurig: Se till att få ett returvärde från den Task som körs med Task.Run() i form av en sträng. Skriv ut den strängen
     //    när tasken är klar (alltså inte inne i den metod som körs av Task.Run).
